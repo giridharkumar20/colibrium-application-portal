@@ -1,0 +1,47 @@
+<div class="bg-white shadow-sm p-4 border-radius-5">
+    <app-common-title [childData]="childData"></app-common-title>
+    <div class="fixedbox">
+        <ngx-charts-advanced-pie-chart
+            (window:resize)="onResize($event)"
+            [view]="view"
+            [scheme]="colorScheme"
+            [results]="single"
+            [gradient]="gradient"
+            (select)="onSelect($event)"
+            (activate)="onActivate($event)"
+            (deactivate)="onDeactivate($event)"
+            >
+        </ngx-charts-advanced-pie-chart>
+        <div class="claim-status-text">
+            <h6>823</h6>
+            <p>Total Claims</p>
+        </div>
+    </div>
+    <div>
+        <hr/>
+    </div>
+    <div class="table-responsive claim-status-table">
+        <table class="table table-borderless">
+            <tr>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">Claims</th>
+                <th scope="col">Amount</th>
+            </tr>
+            <tr *ngFor="let claimStatusList of claimStatus">
+                <td>
+                    <span [ngClass]="{'bg-green': claimStatusList.claimStatus === 'Sanctioned', 'bg-sky-blue': claimStatusList.claimStatus === 'Disbursed', 'bg-blue': claimStatusList.claimStatus === 'Under Process', 'bg-orange': claimStatusList.claimStatus === 'On Hold', 'bg-red': claimStatusList.claimStatus === 'Rejected'}"></span>
+                </td>
+                <td>{{claimStatusList.claimStatus}}</td>
+                <td>{{claimStatusList.claims}}</td>
+                <td>$ {{claimStatusList.amount}}</td>
+            </tr>
+        </table>
+        <div>
+            <hr/>
+        </div>
+        <div class="common-arrow-btn">
+            <a href="javascript:;">View All</a>
+        </div>
+    </div>
+</div>

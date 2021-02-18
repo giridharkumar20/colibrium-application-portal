@@ -1,0 +1,72 @@
+<div class="bg-white shadow-sm p-4 border-radius-5">
+    <app-common-title [childData]="childData"></app-common-title>
+    <div class="reminder-container">
+        <div class="mb-3">
+            <form>
+                <div class="form-group row upload-data-file-container application-form-container">
+                <div class="col-sm-6">
+                    <p-dropdown [options]="uploadDataDropDown" [(ngModel)]="selectedUploadDataDropDown" optionLabel="name"></p-dropdown>
+                </div>
+                </div>
+            </form>
+        </div>
+        <div class="mb-4 text-center">
+            <div class="upload-doc-container">
+                <p>Drag and Drop  the files here<br/>or</p>
+                <input hidden type="file" #uploader (change)="uploadFile($event)"/>
+                <button (click)="uploader.click()">Browse...</button>
+            </div>
+        </div>
+        <div class="common-blue-btn mb-3 text-center">
+            <a href="javascript:;" class="rounded-btn">Upload</a>
+        </div>
+        <div class="row align-items-end justify-content-between">
+            <div class="col-6">
+                <div class="upload-data-file-container application-form-container">
+                    <input type="text" pInputText placeholder="Search">
+                </div>
+            </div>
+            <div class="col-3 file-length">
+                Total files: {{uploadData.length}}
+            </div>
+        </div>
+        <div>
+            <hr class="border-dotted-t"/>
+        </div>
+        <div malihu-scrollbar light [scrollbarOptions]="scrollbarOptions" class="myInternalscroll upload-data-container">
+            <ul>
+                <p-scrollPanel [style]="{width: '100%', height: '130px'}" styleClass="custombar1">
+                    <li *ngFor='let item of uploadData'>
+                        <div class="row">
+                            <div class="col-8 col-md-8">
+                                <i class="fa fa-file-word-o text-blue text-bold mr-1" aria-hidden="true" *ngIf="item.type == 'Word'"></i>
+                                <i class="fa fa-file-excel-o text-green text-bold mr-1" aria-hidden="true" *ngIf="item.type == 'Excel'"></i>
+                                <i class="fa fa-file-pdf-o text-red text-bold mr-1" aria-hidden="true" *ngIf="item.type == 'PDF'"></i>
+                                {{item.Name}}
+                            </div>
+                            <div class="col-2 text-center">
+                                <span *ngIf="item.New == true">New</span>
+                            </div>
+                            <div class="col-1">
+                                <a href="javascript:;">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="col-1">
+                                <a href="javascript:;">
+                                    <i class="fa fa-trash-o " aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </p-scrollPanel>
+            </ul>
+        </div>
+        <div>
+            <hr class="mt-0 border-dotted-t"/>
+        </div>
+        <!-- <div class="common-arrow-btn mt-3">
+            <a href="javascript:;">View All</a>
+        </div> -->
+    </div>
+</div>

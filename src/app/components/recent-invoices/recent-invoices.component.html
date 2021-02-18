@@ -1,0 +1,52 @@
+<div class="bg-white shadow-sm p-4 border-radius-5">
+    <app-common-title [childData]="childData"></app-common-title>
+    <div class="recent-invoice-container">
+        <div class="myInternalscroll" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
+            <div class="table-responsive claim-status-table">
+                <table class="w-100 table table-borderless invoice-table">
+                    <thead>
+                        <tr>
+                            <th *ngFor='let title of invoicesData.titles'>{{title.title}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let item of invoicesData.data'>
+                            <td><span class="name-initial {{item.color}}">R</span>{{item.name}}</td>
+                            <td>{{item.invoice}}</td>
+                            <td>{{item.dateofservice}}</td>
+                            <td><span class="status {{item.status | lowercase}}"></span>{{item.status}}</td>
+                            <td>{{item.amount}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <hr class="mt-0 border-dotted-t"/>
+        </div>
+        <div class="d-flex align-items-center justify-content-between pt-3 pb-1">
+            <div class="common-arrow-btn">
+                <a href="javascript:;">View All</a>
+            </div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

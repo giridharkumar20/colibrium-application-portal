@@ -1,0 +1,35 @@
+<div class="bg-white shadow-sm p-4 border-radius-5">
+    <app-common-title [childData]="childData"></app-common-title>
+    <div class="reminder-container">
+        <div malihu-scrollbar [scrollbarOptions]="scrollbarOptions" class="myInternalscroll">
+            <ul>
+                <li *ngFor='let reminderList of reminder'>
+                    <div class="row">
+                        <div class="col-10">
+                            <h6>{{reminderList.title}}</h6>
+                            <p>{{reminderList.para}}</p>
+                        </div>
+                        <div class="col-2">
+                            <div class="view-eye">
+                                <a href="javascript:;">
+                                    <i class={{reminderList.icon}} aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <hr class="mt-0 border-dotted-t"/>
+        </div>
+        <div class="d-flex justify-content-between pt-3 pb-2">
+            <div class="common-arrow-btn">
+                <a href="javascript:;">View All</a>
+            </div>
+            <div class="common-blue-btn">
+                <a href="javascript:;" class="rounded-btn">Add New</a>
+            </div>
+        </div>
+    </div>
+</div>

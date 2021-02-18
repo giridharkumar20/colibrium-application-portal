@@ -1,0 +1,768 @@
+<div class="bg-white shadow-sm p-4 border-radius-5">
+    <div class="row d-flex align-items-center">
+        <div class="col-md-2 mb-3 mb-md-0">
+            <div class="top-title d-flex align-items-center justify-content-between">
+                <h3 class="main-title">Application <img src="assets/bell-icon.png"/></h3>
+            </div>
+        </div>
+        <div class="col-md-2 mb-3 mb-md-0">
+            <div class="right-icons">
+                <ul class="d-flex justify-content-between w-100">
+                    <li class="w-100">
+                        <select class="form-control">
+                          <option>
+                            Licenses
+                          </option>
+                          <option>
+                            Education & Training
+                          </option>
+                          <option>
+                            Hospital Affiliations
+                          </option>
+                          <option>
+                            Specialty & Board Certifications
+                          </option>
+                          <option>
+                            Practice Locations
+                          </option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="right-icons">
+                <ul class="d-flex justify-content-end w-100">
+                    <li class="mr-5" style="width:75%">
+                        <p class="mb-0">Completed</p>
+                        <p-progressBar [value]="95"></p-progressBar>
+                    </li>
+                    <!-- <li>
+                        <a href="javascript:;" class="refresh"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="expand"><i class="fa fa-expand" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="drag"><i class="fa fa-arrows" aria-hidden="true"></i></a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="col mt-3">
+            <p class="red-text">This area is for the application instructions. Here, we will explain to the user to read and confirm or update the stored application data by using the buttons below or 
+                download and review all at one time.</p>
+        </div>
+    </div>
+    <p-accordion>
+        <div class="accordion-container">
+            <div class="add-new">
+                <a href="javascript:;">Add New</a>
+                <span class="ml-md-4 ml-2">
+                    <img src="assets/tick-mark-icon.png"/>
+                </span>
+            </div>            
+        </div>
+        <p-accordionTab header="Licenses (02)" [selected]="true">
+            <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide slideBy='page'>
+                    <div class="row application-form-container">
+                        <div class="col-12 d-flex justify-content-between align-items-center">
+                            <h4>01</h4>
+                            <!-- <a href="javascript:;">Clear All</a> -->
+                        </div>
+                        <div class="col-12">
+                          <form>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">License Type</label>
+                                <div class="col-sm-8">
+                                  <p-dropdown [options]="doctorType" [(ngModel)]="selectedDoctor" optionLabel="name" [disabled]="true" class="disabled"></p-dropdown>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">License State</label>
+                                <div class="col-sm-8">
+                                  <p-dropdown [options]="licenceState" [(ngModel)]="selectedLicenceState" optionLabel="name" [disabled]="true" class="disabled"></p-dropdown>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">License Number</label>
+                                <div class="col-sm-8">
+                                  <input type="text" pInputText [(ngModel)]="value1" placeholder="MD2004987B" [disabled]="true" class="disabled">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Issue Date</label>
+                                <div class="col-sm-8">
+                                  <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="06/01/2004" [disabled]="true" class="disabled"></p-calendar>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Expiration Date</label>
+                                <div class="col-sm-8">
+                                  <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="12/31/2021" [disabled]="true" class="disabled"></p-calendar> 
+                                </div>
+                              </div>
+                          </form>
+                        </div>
+                    </div>
+                </ng-template>  
+                <ng-template carouselSlide slideBy='page'>
+                    <div class="row application-form-container">
+                        <div class="col-12 d-flex justify-content-between align-items-center">
+                            <h4>02</h4>
+                            <!-- <a href="javascript:;">Clear All</a> -->
+                        </div>
+                        <div class="col-12">
+                          <form>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">License Type</label>
+                                <div class="col-sm-8">
+                                  <p-dropdown [options]="doctorType2" [(ngModel)]="selectedDoctor2" optionLabel="name" [disabled]="true" class="disabled"></p-dropdown>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">License State</label>
+                                <div class="col-sm-8">
+                                  <p-dropdown [options]="licenceState" [(ngModel)]="selectedLicenceState" optionLabel="name" [disabled]="true" class="disabled"></p-dropdown>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">License Number</label>
+                                <div class="col-sm-8">
+                                  <input type="text" pInputText [(ngModel)]="value1" placeholder="A156772-V" [disabled]="true" class="disabled">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Issue Date</label>
+                                <div class="col-sm-8">
+                                  <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="12/15/2016" [disabled]="true" class="disabled"></p-calendar>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Expiration Date</label>
+                                <div class="col-sm-8">
+                                  <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="12/31/2021" [disabled]="true" class="disabled"></p-calendar> 
+                                </div>
+                              </div>
+                          </form>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide></ng-template>
+            </owl-carousel-o>
+            
+            <div class="row">
+              <div class="col-12">
+                <hr class="dotted-border"/>
+              </div>
+              <div class="col-12 d-md-flex justify-content-center text-center mt-3">
+                <div class="common-white-btn mr-md-3 mb-3 mb-md-0">
+                  <a href="javascript:;" class="rounded-btn">Make Changes</a>
+                </div>
+                <div class="common-blue-btn">
+                  <a href="javascript:;" class="rounded-btn">Looks Good</a>
+                </div>
+              </div>
+            </div>
+        </p-accordionTab>
+        <div class="accordion-container">
+            <div class="add-new">
+                <a href="javascript:;">Add New</a>
+                <span class="ml-md-4 ml-2">
+                    <img src="assets/bell-icon.png"/>
+                </span>
+            </div>            
+        </div>
+        <p-accordionTab header="Education & Training (02)">
+            <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide slideBy='page'>
+                    <div class="row application-form-container">
+                        <div class="col-12 d-flex justify-content-between align-items-center">
+                            <h4>01</h4>
+                            <a href="javascript:;">Clear All</a>
+                        </div>
+                        <div class="col-12">
+                            <form>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Institution</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="Emory"> 
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Start Date</label>
+                                  <div class="col-sm-8">
+                                    <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="08/10/1998"></p-calendar>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Graduation Date</label>
+                                  <div class="col-sm-8">
+                                    <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="06/01/2004"></p-calendar>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Education Type</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="Graduate">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Graduate Type</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="US/Canadian">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Degree Awarded</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="Medical Doctor">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Training Complete</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="Yes">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Reason</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="N/A">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">ECFMG Number</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="N/A">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">ECFMG Date</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="N/A">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Address Line 1</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="213, Raymond St.">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Address Line 2</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="N/A">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Country</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="USA">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">State</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="Philadelphia">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">City</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="Pennsylvania">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Zip/Postal Code</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="19019">
+                                  </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </ng-template>  
+                <ng-template carouselSlide slideBy='page'>
+                    <div class="row application-form-container">
+                        <div class="col-12 d-flex justify-content-between align-items-center">
+                            <h4>02</h4>
+                            <a href="javascript:;">Clear All</a>
+                        </div>
+                        <div class="col-12">
+                            <form>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Institution</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="GITAM University">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Start Date</label>
+                                  <div class="col-sm-8">
+                                    <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="03/06/2008"></p-calendar>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Graduation Date</label>
+                                  <div class="col-sm-8">
+                                    <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="05/13/2008"></p-calendar>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Education Type</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="PG">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Graduate Type</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="US">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Degree Awarded</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="Medical Doctor">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Training Complete</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="Yes">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Reason</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="N/A">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">ECFMG Number</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="N/A">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">ECFMG Date</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="N/A"> 
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Address Line 1</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="MIG 222, JNTU Road">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Address Line 2</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="Madhapur">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Country</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="India">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">State</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="Telangana">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">City</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="Hyderabad">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-4 col-form-label">Zip/Postal Code</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="500072">
+                                  </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide></ng-template>
+            </owl-carousel-o>
+            
+            <div class="row">
+              <div class="col-12">
+                <hr class="dotted-border"/>
+              </div>
+              <div class="col-12 d-md-flex justify-content-center text-center mt-3">
+                <div class="common-white-btn mr-md-3 mb-3 mb-md-0">
+                  <a href="javascript:;" class="rounded-btn">Cancel</a>
+                </div>
+                <div class="common-blue-btn">
+                  <a href="javascript:;" class="rounded-btn">Save Changes</a>
+                </div>
+              </div>
+            </div>
+        </p-accordionTab>
+        <div class="accordion-container">
+            <div class="add-new">
+                <a href="javascript:;">Add New</a>
+                <span class="ml-md-4 ml-2">
+                    <img src="assets/bell-icon.png"/>
+                </span>
+            </div>
+        </div>
+        <p-accordionTab header="Hospital Affiliations (02)">
+            <owl-carousel-o [options]="customOptions">
+              <ng-template carouselSlide slideBy='page'>
+                  <div class="row application-form-container">
+                      <div class="col-12 d-flex justify-content-between align-items-center">
+                          <h4>01</h4>
+                          <!-- <a href="javascript:;">Clear All</a> -->
+                      </div>
+                      <div class="col-12">
+                          <form>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Privilege Type</label>
+                                <div class="col-sm-8">
+                                  <p-dropdown [options]="previlageType" [(ngModel)]="selectedPrevilageType" optionLabel="name"></p-dropdown>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Hospital Id</label>
+                                <div class="col-sm-8">
+                                  <input type="text" pInputText [(ngModel)]="value1" placeholder="40442005NY">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Hospital Name</label>
+                                <div class="col-sm-8">
+                                  <input type="text" pInputText [(ngModel)]="value1" placeholder="Mount Sinai">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Facility Waived</label>
+                                <div class="col-sm-8">
+                                  <p-dropdown [options]="facilityWaived" [(ngModel)]="selectedFacilityWaived" optionLabel="name"></p-dropdown>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Waive Reason</label>
+                                <div class="col-sm-8">
+                                  <input type="text" pInputText [(ngModel)]="value1" placeholder="N/A">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Start Date</label>
+                                <div class="col-sm-8">
+                                  <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="01/01/2012"></p-calendar>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">End Date</label>
+                                <div class="col-sm-8">
+                                  <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="12/31/2012"></p-calendar>
+                                </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </ng-template>  
+              <ng-template carouselSlide slideBy='page'>
+                  <div class="row application-form-container">
+                      <div class="col-12 d-flex justify-content-between align-items-center">
+                          <h4>02</h4>
+                          <!-- <a href="javascript:;">Clear All</a> -->
+                      </div>
+                      <div class="col-12">
+                        <form>
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label">Privilege Type</label>
+                              <div class="col-sm-8">
+                                <p-dropdown [options]="previlageType2" [(ngModel)]="selectedPrevilageType2" optionLabel="name"></p-dropdown>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label">Hospital Id</label>
+                              <div class="col-sm-8">
+                                <input type="text" pInputText [(ngModel)]="value1" placeholder="A-007234NY">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label">Hospital Name</label>
+                              <div class="col-sm-8">
+                                <input type="text" pInputText [(ngModel)]="value1" placeholder="NY Presbyterian">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label">Facility Waived</label>
+                              <div class="col-sm-8">
+                                <p-dropdown [options]="facilityWaived" [(ngModel)]="selectedFacilityWaived" optionLabel="name"></p-dropdown>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label">Waive Reason</label>
+                              <div class="col-sm-8">
+                                <input type="text" pInputText [(ngModel)]="value1" placeholder="N/A">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label">Start Date</label>
+                              <div class="col-sm-8">
+                                <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="01/01/2008"></p-calendar>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label">End Date</label>
+                              <div class="col-sm-8">
+                                <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="12/31/2012"></p-calendar>
+                              </div>
+                            </div>
+                        </form>
+                      </div>
+                  </div>
+              </ng-template>
+              <ng-template carouselSlide></ng-template>
+            </owl-carousel-o>            
+            <div class="row">
+              <div class="col-12">
+                <hr class="dotted-border"/>
+              </div>
+              <div class="col-12 d-md-flex justify-content-center text-center mt-3">
+                <div class="common-white-btn mr-md-3 mb-3 mb-md-0">
+                  <a href="javascript:;" class="rounded-btn">Cancel</a>
+                </div>
+                <div class="common-blue-btn">
+                  <a href="javascript:;" class="rounded-btn">Save Changes</a>
+                </div>
+              </div>
+            </div>
+        </p-accordionTab>
+        <div class="accordion-container">
+            <div class="add-new">
+                <a href="javascript:;">Add New</a>
+                <span class="ml-md-4 ml-2">
+                    <img src="assets/tick-mark-icon.png"/>
+                </span>
+            </div>
+        </div>
+        <p-accordionTab header="Specialty & Board Certifications (02)">
+            <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide slideBy='page'>
+                    <div class="row application-form-container">
+                        <div class="col-12 d-flex justify-content-between align-items-center">
+                            <h4>01</h4>
+                            <a href="javascript:;">Clear All</a>
+                        </div>
+                        <div class="col-12">
+                            <form>
+                                <div class="form-group row">
+                                  <label class="col-sm-5 col-form-label">Specialty</label>
+                                  <div class="col-sm-7">
+                                    <input type="text" pInputText [(ngModel)]="value1" placeholder="Cardiology">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-5 col-form-label">Board Certified</label>
+                                  <div class="col-sm-7">
+                                    <p-dropdown [options]="facilityWaived" [(ngModel)]="selectedFacilityWaived" optionLabel="name"></p-dropdown>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-5 col-form-label">Board Certified Status</label>
+                                  <div class="col-sm-7">
+                                    <p-dropdown [options]="boardCertiStatus" [(ngModel)]="selectedBoardCertiStatus" optionLabel="name"></p-dropdown>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-5 col-form-label">Board Issued Date</label>
+                                  <div class="col-sm-7">
+                                    <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="03/28/2019"></p-calendar>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-sm-5 col-form-label">Board Renewed Date</label>
+                                  <div class="col-sm-7">
+                                    <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="05/03/2019"></p-calendar>
+                                  </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </ng-template>  
+                <ng-template carouselSlide slideBy='page'>
+                    <div class="row application-form-container">
+                        <div class="col-12 d-flex justify-content-between align-items-center">
+                            <h4>02</h4>
+                            <a href="javascript:;">Clear All</a>
+                        </div>
+                        <div class="col-12">
+                          <form>
+                              <div class="form-group row">
+                                <label class="col-sm-5 col-form-label">Specialty</label>
+                                <div class="col-sm-7">
+                                  <input type="text" pInputText [(ngModel)]="value1" placeholder="Heart Disease">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-5 col-form-label">Board Certified</label>
+                                <div class="col-sm-7">
+                                  <p-dropdown [options]="facilityWaived" [(ngModel)]="selectedFacilityWaived" optionLabel="name"></p-dropdown>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-5 col-form-label">Board Certified Status</label>
+                                <div class="col-sm-7">
+                                  <p-dropdown [options]="boardCertiStatus2" [(ngModel)]="selectedBoardCertiStatus2" optionLabel="name"></p-dropdown>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-5 col-form-label">Board Issued Date</label>
+                                <div class="col-sm-7">
+                                  <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="11/03/2020"></p-calendar>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-5 col-form-label">Board Renewed Date</label>
+                                <div class="col-sm-7">
+                                  <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder=""></p-calendar>
+                                </div>
+                              </div>
+                          </form>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide></ng-template>  
+            </owl-carousel-o>
+            
+            <div class="row">
+              <div class="col-12">
+                <hr class="dotted-border"/>
+              </div>
+              <div class="col-12 d-md-flex justify-content-center text-center mt-3">
+                <div class="common-white-btn mr-md-3 mb-3 mb-md-0">
+                  <a href="javascript:;" class="rounded-btn">Cancel</a>
+                </div>
+                <div class="common-blue-btn">
+                  <a href="javascript:;" class="rounded-btn">Save Changes</a>
+                </div>
+              </div>
+            </div>
+        </p-accordionTab>
+        <div class="accordion-container">
+            <div class="add-new">
+                <a href="javascript:;">Add New</a>
+                <span class="ml-md-4 ml-2">
+                    <img src="assets/bell-icon.png"/>
+                </span>
+            </div>
+        </div>
+        <p-accordionTab header="Practice Locations (02)">
+          <owl-carousel-o [options]="customOptions">
+              <ng-template carouselSlide slideBy='page'>
+                  <div class="row application-form-container">
+                      <div class="col-12 d-flex justify-content-between align-items-center">
+                          <h4>01</h4>
+                          <a href="javascript:;">Clear All</a>
+                      </div>
+                      <div class="col-12">
+                          <form>
+                              <div class="form-group row">
+                                <label class="col-sm-5 col-form-label">Policy No.</label>
+                                <div class="col-sm-7">
+                                  <input type="text" pInputText [(ngModel)]="value1" placeholder="ACD-939-12"> 
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-5 col-form-label">Aggregate Coverage</label>
+                                <div class="col-sm-7">
+                                  <p-dropdown [options]="aggregateCoverage" [(ngModel)]="aggregateCoverage" optionLabel="name"></p-dropdown>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-5 col-form-label">Per Occurrence Coverage</label>
+                                <div class="col-sm-7">
+                                  <p-dropdown [options]="preAccuranceAvg" [(ngModel)]="selectedPreAccuranceAvg" optionLabel="name"></p-dropdown>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-5 col-form-label">Issue Date</label>
+                                <div class="col-sm-7">
+                                  <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="03/28/2019"></p-calendar>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-sm-5 col-form-label">Expiration Date</label>
+                                <div class="col-sm-7">
+                                  <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="05/05/2019"></p-calendar>
+                                </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </ng-template>  
+              <ng-template carouselSlide slideBy='page'>
+                  <div class="row application-form-container">
+                      <div class="col-12 d-flex justify-content-between align-items-center">
+                          <h4>02</h4>
+                          <a href="javascript:;">Clear All</a>
+                      </div>
+                      <div class="col-12">
+                        <form>
+                            <div class="form-group row">
+                              <label class="col-sm-5 col-form-label">Policy No.</label>
+                              <div class="col-sm-7">
+                                <input type="text" pInputText [(ngModel)]="value1" placeholder="ACD-939-12"> 
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-5 col-form-label">Aggregate Coverage</label>
+                              <div class="col-sm-7">
+                                <p-dropdown [options]="aggregateCoverage2" [(ngModel)]="selectedAggregateCoverage2" optionLabel="name"></p-dropdown>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-5 col-form-label">Per Occurrence Coverage</label>
+                              <div class="col-sm-7">
+                                <p-dropdown [options]="preAccuranceAvg" [(ngModel)]="selectedPreAccuranceAvg" optionLabel="name"></p-dropdown>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-5 col-form-label">Issue Date</label>
+                              <div class="col-sm-7">
+                                <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="11/03/2020"></p-calendar>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-5 col-form-label">Expiration Date</label>
+                              <div class="col-sm-7">
+                                <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" appendTo="body" placeholder="12/10/2020"></p-calendar>
+                              </div>
+                            </div>
+                        </form>
+                      </div>
+                  </div>
+              </ng-template>
+              <ng-template carouselSlide slideBy='page'></ng-template>  
+          </owl-carousel-o>
+          <div class="row">
+            <div class="col-12">
+              <hr class="dotted-border"/>
+            </div>
+            <div class="col-12 d-md-flex justify-content-center text-center mt-3">
+              <div class="common-white-btn mr-md-3 mb-3 mb-md-0">
+                <a href="javascript:;" class="rounded-btn">Cancel</a>
+              </div>
+              <div class="common-blue-btn">
+                <a href="javascript:;" class="rounded-btn">Save Changes</a>
+              </div>
+            </div>
+          </div>
+        </p-accordionTab>
+    </p-accordion>
+</div>

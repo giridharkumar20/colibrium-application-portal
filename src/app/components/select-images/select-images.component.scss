@@ -1,0 +1,25 @@
+.select-img-content {
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 3px;
+    h6 {
+        font-size: 14px;
+        color: #36414d;
+        text-align: center;
+        margin: 10px 0;
+    }
+    p {
+        font-size: 12px;
+        color: #455a64;
+    }
+    .common-blue-btn {
+        text-align: center;
+        a {
+            padding: 3px 20px;
+        }
+    }
+    .img-tumb{
+        max-height: 175px;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,62 @@
+<div [ngClass]="(lefNaveExpanded)?'left-panel expanded':'left-panel'">
+    <a href="javascript:;" class="btn-slider" (click)="slideMe()"><i [ngClass]="(lefNaveExpanded)?'fa fa-angle-double-left': 'fa fa-angle-double-right'" aria-hidden="true"></i></a>
+    <ul class="left-nav-list">
+        <li (click)="upstep(0)" [ngClass]="{'active': step==='step0'}">
+            <a href="javascript:;">Dashboard</a>
+        </li>
+        <li (click)="upstep(1)" [ngClass]="step==='step1'? 'hover submenu': 'submenu'">
+            <a href="javascript:;">Navigation 1</a>
+            <ul>
+                <li><a href="javascript:;">Sublink 1</a></li>
+                <li><a href="javascript:;">Sublink 2</a></li>
+                <li><a href="javascript:;">Sublink 3</a></li>
+                <li><a href="javascript:;">Sublink 4</a></li>
+            </ul>
+        </li>
+        <li (click)="upstep(2)" [ngClass]="step==='step2'? 'hover submenu': 'submenu'">
+            <a href="javascript:;">Navigation 2</a>
+            <ul>
+                <li><a href="javascript:;">Sublink 1</a></li>
+                <li><a href="javascript:;">Sublink 2</a></li>
+                <li><a href="javascript:;">Sublink 3</a></li>
+                <li><a href="javascript:;">Sublink 4</a></li>
+            </ul>
+        </li>
+        <li (click)="upstep(3)" [ngClass]="step==='step3'? 'hover submenu': 'submenu'">
+            <a href="javascript:;">Navigation 3</a>
+            <ul>
+                <li><a href="javascript:;">Sublink 1</a></li>
+                <li><a href="javascript:;">Sublink 2</a></li>
+                <li><a href="javascript:;">Sublink 3</a></li>
+                <li><a href="javascript:;">Sublink 4</a></li>
+            </ul>
+        </li>
+        <li (click)="upstep(4)" [ngClass]="step==='step4'? 'hover submenu': 'submenu'">
+            <a href="javascript:;">Navigation 4</a>
+            <ul>
+                <li><a href="javascript:;">Sublink 1</a></li>
+                <li><a href="javascript:;">Sublink 2</a></li>
+                <li><a href="javascript:;">Sublink 3</a></li>
+                <li><a href="javascript:;">Sublink 4</a></li>
+            </ul>
+        </li>
+        <li (click)="upstep(5)" [ngClass]="step==='step5'? 'hover submenu': 'submenu'">
+            <a href="javascript:;">Navigation 5</a>
+            <ul>
+                <li><a href="javascript:;">Sublink 1</a></li>
+                <li><a href="javascript:;">Sublink 2</a></li>
+                <li><a href="javascript:;">Sublink 3</a></li>
+                <li><a href="javascript:;">Sublink 4</a></li>
+            </ul>
+        </li>
+        <li (click)="upstep(6)" [ngClass]="step==='step6'? 'hover submenu': 'submenu'">
+            <a href="javascript:;">Navigation 6</a>
+            <ul>
+                <li><a href="javascript:;">Sublink 1</a></li>
+                <li><a href="javascript:;">Sublink 2</a></li>
+                <li><a href="javascript:;">Sublink 3</a></li>
+                <li><a href="javascript:;">Sublink 4</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>

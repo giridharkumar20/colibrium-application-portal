@@ -1,0 +1,37 @@
+<div class="bg-white shadow-sm p-4 border-radius-5">
+    <app-common-title [childData]="childData"></app-common-title>
+    <div class="live-chat-container">
+        <div malihu-scrollbar [scrollbarOptions]="scrollbarOptions" class="myInternalscroll">
+            <ul>
+                <li *ngFor='let liveChatList of liveChat'>
+                    <div class="row">
+                        <div class="col-12">
+                            <h6 class="text-green">{{liveChatList.virtualAssistant}}</h6>
+                            <p class="mb-3">{{liveChatList.para}}</p>
+                            <h6 class="text-blue">{{liveChatList.me}}</h6>
+                            <p class="mb-4">{{liveChatList.mePara}}</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="py-2 mb-1">
+            <div class="typing-text">
+                <i>Virtual Assistant is typing...</i>
+            </div>
+            <div class="typeing-box d-flex justify-content-between mt-3">
+                <div class="upload-btn-wrapper">
+                    <button class="btn">
+                        <img src="assets/attached-file-icon.png">
+                    </button>
+                    <input type="file" name="myfile" />
+                </div>
+                <input type="text" class="typing">
+                <button type="submit" class="typing-submit">
+                    <img src="assets/plane-icon.png"/>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+

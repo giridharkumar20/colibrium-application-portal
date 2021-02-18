@@ -1,0 +1,61 @@
+.live-chat-container {
+    .malihu-scrollbar{
+        max-height: 300px;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            h6 {
+                font-size: 14px;
+            }
+            p {
+                font-size: 13px;
+                color: #999999;
+                &:last-child {
+                    margin-bottom: 0 !important;
+                }
+            }
+        }
+    }
+}
+.typing-text {
+    i {
+        font-size: 13px;
+        color: #d5d5d5;
+    }
+}
+.typeing-box {
+    .typing-submit {
+        border: 0;
+        background: transparent;
+    }
+    .upload-btn-wrapper {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+    }      
+    .btn {
+        padding: 0;
+        line-height: normal;
+        color: #51646e;
+        margin-right: 10px;
+    }    
+    .upload-btn-wrapper input[type=file] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+    .typing {
+        background: #f8f8f8;
+        border: 1px solid #e3e3e3;
+        width: 75%;
+        border-radius: 3px;
+        height: 33px;
+    }
+}
+.typing-text {
+    padding: 15px 0 0;
+}

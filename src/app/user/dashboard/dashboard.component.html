@@ -1,0 +1,94 @@
+<div [ngClass]="(leftExpand)?'wrapper':'wrapper expanded'">
+    <div class="container-fluid">
+        <!-- <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                    </ol>
+                </nav>
+            </div>
+        </div> -->
+        <div class="row mt-3">
+            <div class="col-12">
+                <h1 class="text-blue main-title text-uppercase">Re-Credentialing Application</h1>
+                <!-- <button (click)="expandM()">Click me</button> -->
+                <hr class="mt-0"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="bg-white shadow-sm p-3 border-radius-5 mb-3 d-flex notification justify-content-between notification-close" *ngIf="closeNotification" [ngClass]="!closeNotification ? '': 'active'">
+                    <span>
+                        <p class="mb-0">Your attention is required in two (2) areas. Please review your application and upload required documentation to submit your recredentialing request.</p>
+                    </span>
+                    <a href="javascript:;" (click)="closeNotificationFunc()">
+                        <i class="pi pi-times"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 h-100 mb-4 mb-lg-0">
+                <app-detailed-information></app-detailed-information>
+            </div>
+            <div class="col-lg-6 h-100">
+                <app-upload-data-file></app-upload-data-file>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col-12">
+                <app-application></app-application>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col bottom-button">
+                <div class="p-3 text-center d-md-flex align-items-center justify-content-end">
+                    <div class="common-white-btn mr-md-2 mb-3 mb-md-0">
+                        <a href="javascript:;" class="rounded-btn">Save Changes</a>
+                    </div>
+                    <div class="common-blue-btn mr-md-2 mb-3 mb-md-0">
+                        <a href="javascript:;" class="rounded-btn">Download Copy</a>
+                    </div>
+                    <div class="common-blue-btn">
+                        <button type="submit" class="rounded-btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #cardModal let-modal>
+ <div *ngIf="compName === 'app-claim-statistic'">
+    <app-claim-statistic></app-claim-statistic>
+ </div>  
+ <div *ngIf="compName === 'app-claim-status'">
+    <app-claims-status></app-claims-status>
+ </div>   
+ <div *ngIf="compName === 'app-upload-data-file'">
+    <app-upload-data-file></app-upload-data-file>
+ </div>   
+ <div *ngIf="compName === 'app-demographic-widget'">
+    <app-demographic-widget></app-demographic-widget>
+ </div>   
+ <div *ngIf="compName === 'app-recent-invoices'">
+    <app-recent-invoices></app-recent-invoices>
+ </div>   
+ <div *ngIf="compName === 'app-reminder-notes'">
+    <app-reminder-notes></app-reminder-notes>
+ </div>   
+ <div *ngIf="compName === 'app-select-images'">
+    <app-select-images></app-select-images>
+ </div>   
+ <div *ngIf="compName === 'app-detailed-information'">
+    <app-detailed-information></app-detailed-information>
+ </div>    
+ <div *ngIf="compName === 'app-health-updates'">
+    <app-health-updates></app-health-updates>
+ </div>   
+ <div *ngIf="compName === 'app-live-chat'">
+    <app-live-chat></app-live-chat>
+ </div>   
+</ng-template>

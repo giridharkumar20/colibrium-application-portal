@@ -1,0 +1,28 @@
+.reminder-container {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            border-bottom: 1px dotted #d3d3d3;
+            padding: 25px 0;
+            h6 {
+                font-size: 14px;
+                color: #28333f;
+            }
+            p {
+                font-size: 13px;
+                color: #999999;
+                margin: 0;
+            }
+            .view-eye {
+                a {
+                    color: #0889e4;
+                    i {
+                        color: #0889e4;
+                    }
+                }
+            }
+        }
+    }
+}

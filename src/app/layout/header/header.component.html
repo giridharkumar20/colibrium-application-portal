@@ -1,0 +1,54 @@
+<header>
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-5">
+        <a href="/" class="company-link">
+          <img src="assets/logo.png" class="img-fluid">
+        </a>
+      </div>
+      <div class="col-7 text-right">
+        <div class="right-links">
+          <ul>
+            <li>
+              <a href="javascript:;" class="fev" (click)="showFevToggle()">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+              </a>
+              <div *ngIf="showFev" class="drop-down-menu shadow-sm">
+                <ul>
+                  <li>
+                    <a href="javascript:;">Setting</a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">Log out</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="javascript:;" class="bell">
+                <i class="fa fa-bell-o" aria-hidden="true"></i>
+                <span class="badges">8</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;" class="admin">
+                <i class="fa fa-user-circle" aria-hidden="true"></i>
+                <span (click)="showAdminToggle()">Admin</span>
+              </a>
+              <div *ngIf="showAdmin" class="drop-down-menu shadow-sm">
+                <ul>
+                  <li>
+                    <a href="javascript:;">Setting</a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">Log out</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

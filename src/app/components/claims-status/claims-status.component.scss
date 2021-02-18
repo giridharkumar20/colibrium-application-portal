@@ -1,0 +1,42 @@
+.claim-status-table {
+    tr {
+        font-size: 14px;
+        color: #455a64;
+        th {
+            padding: 10px 5px;
+        }
+        td {
+            padding: 5px;
+            span {
+                width: 12px;
+                height: 12px;
+                display: block;
+                margin-top: 4px;
+            }
+        }
+    }
+}
+.fixedbox{
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    .claim-status-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        h6 {
+            margin: 0;
+            font-size: 30px;
+            color: #28b0e2;
+            font-family: 'Poppins-Bold';
+        }
+        p {
+            font-size: 12px;
+            color: #666666;
+            margin: 0;
+        }
+    }
+}

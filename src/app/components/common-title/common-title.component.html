@@ -1,0 +1,92 @@
+<div class="top-title d-flex align-items-center justify-content-between">
+    <h3 class="main-title">{{frmParent.title}} <img src={{frmParent.notificationIcon}}></h3>
+    <div class="right-icons">
+        <ul>
+            <li *ngIf="frmParent.category" class="mr-2">
+                <select class="form-control">
+                    <option>
+                        Category
+                    </option>
+                </select>
+            </li>
+            <li *ngIf="frmParent.thisYear">
+                <select class="form-control">
+                    <option>
+                        This Year
+                    </option>
+                </select>
+            </li>
+            <li *ngIf="frmParent.all">
+                <select class="form-control">
+                    <option>
+                        All
+                    </option>
+                </select>
+            </li>
+            <li *ngIf="frmParent.slectb">
+                <select class="form-control">
+                    <option>
+                        Select
+                    </option>
+                </select>
+            </li>
+            <li *ngIf="frmParent.viewarchives">
+                <a href="javascript:;" class="text-blue viewarchives">View Archives</a>
+            </li>
+            <li *ngIf="frmParent.searchBox">
+                <!-- <a href="javascript:;" class="search"></a> -->
+                <div class="search-container">
+                    <input type="text" class="form-control"/>
+                    <button type="submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </li>
+            <li *ngIf="frmParent.search">
+                <a href="javascript:;" class="search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li *ngIf="frmParent.filter">
+                <a href="javascript:;" class="filter"><i class="fa fa-filter" aria-hidden="true"></i></a>
+            </li>
+            <li *ngIf="frmParent.refresh">
+                <a href="javascript:;" class="refresh"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+            </li>
+            <li *ngIf="frmParent.floppy">
+                <a href="javascript:;" class="floppy"><i class="fa fa-floppy-o" aria-hidden="true"></i></a>
+            </li>
+            <li *ngIf="frmParent.donload">
+                <a href="javascript:;" class="donload position-relative">
+                    <i class="fa fa-file-o" aria-hidden="true"></i>
+                    <i class="fa fa-arrow-down position-absolute" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li *ngIf="frmParent.chart">
+                <a href="javascript:;" class="chart"><i class="fa fa-bar-chart" aria-hidden="true"></i></a>
+            </li>
+            <li *ngIf="frmParent.expand && !modalState">
+                <a href="javascript:;" class="expand" (click)="expand(frmParent.epname)"><i class="fa fa-expand" aria-hidden="true"></i></a>
+            </li>
+            <li *ngIf="modalState">
+                <a href="javascript:;" class="expand" (click)="compress(frmParent.epname)"><i class="fa fa-compress" aria-hidden="true"></i></a>
+            </li>
+            <li *ngIf="frmParent.drag">
+                <a href="javascript:;" class="drag"><i class="fa fa-arrows" aria-hidden="true"></i></a>
+            </li>
+            <li *ngIf="frmParent.pagePerView" class="ml-2">
+                <select class="form-control">
+                    <option>
+                        5
+                    </option>
+                    <option>
+                        10
+                    </option>
+                    <option>
+                        15
+                    </option>
+                </select>
+            </li>
+        </ul>
+    </div>
+</div>
