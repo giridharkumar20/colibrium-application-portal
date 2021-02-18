@@ -90,6 +90,7 @@ export class UploadDataFileComponent implements OnInit {
     }
   ]
   ngOnInit(): void {
+    
   }
   uploadFile($event){
     
