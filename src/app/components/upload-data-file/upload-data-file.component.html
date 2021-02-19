@@ -4,9 +4,42 @@
         <div class="mb-3">
             <form>
                 <div class="form-group row upload-data-file-container application-form-container">
-                <div class="col-sm-6">
-                    <p-dropdown [options]="uploadDataDropDown" [(ngModel)]="selectedUploadDataDropDown" optionLabel="name"></p-dropdown>
-                </div>
+                    <div class="col-sm-6">
+                        <!-- <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" placeholder="Select">
+                            <ng-template pTemplate="selectedItem">
+                                <div class="country-item country-item-value" *ngIf="selectedCountry">
+                                    <img src="/assets/{{country.icon}}.png" [class]="'flag flag-' + selectedCountry.icon.toLowerCase()" />
+                                    <div>{{selectedCountry.name}}</div>
+                                </div>
+                            </ng-template>
+                            <ng-template let-country pTemplate="item">
+                                <div class="country-item">
+                                    <img src="/assets/{{country.icon}}.png" [class]="'flag flag-' + country.icon.toLowerCase()" />
+                                    <div>{{country.name}}</div>
+                                </div>
+                            </ng-template>
+                        </p-dropdown> -->
+
+
+                        <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" placeholder="Select">
+                            <!-- <ng-template pTemplate="selectedItem">
+                                <div class="country-item country-item-value" *ngIf="selectedCountry">
+                                    <img src="/assets/{{country.icon}}.png" [class]="'flag flag-' + selectedCountry.icon.toLowerCase()" />
+                                    <div>{{selectedCountry.name.sdfsadffa}}</div>
+                                </div>
+                            </ng-template> -->
+                            <ng-template let-country pTemplate="country">
+                                <div class="country-item">
+                                    <span>
+                                        <i *ngIf="country.showHide == true">
+                                            <img src="assets/{{country.icon}}.png" [class]="'flag flag-' + country.icon.toLowerCase()" />
+                                        </i>
+                                    </span>
+                                    <div>{{country.name}}</div>
+                                </div>
+                            </ng-template>
+                        </p-dropdown>
+                    </div>
                 </div>
             </form>
         </div>
@@ -38,21 +71,21 @@
                 <p-scrollPanel [style]="{width: '100%', height: '130px'}" styleClass="custombar1">
                     <li *ngFor='let item of uploadData'>
                         <div class="row">
-                            <div class="col-8 col-md-8">
+                            <div class="col-5 col-md-8">
                                 <i class="fa fa-file-word-o text-blue text-bold mr-1" aria-hidden="true" *ngIf="item.type == 'Word'"></i>
                                 <i class="fa fa-file-excel-o text-green text-bold mr-1" aria-hidden="true" *ngIf="item.type == 'Excel'"></i>
                                 <i class="fa fa-file-pdf-o text-red text-bold mr-1" aria-hidden="true" *ngIf="item.type == 'PDF'"></i>
                                 {{item.Name}}
                             </div>
-                            <div class="col-2 text-center">
+                            <div class="col-3 col-md-2 text-center">
                                 <span *ngIf="item.New == true">New</span>
                             </div>
-                            <div class="col-1">
+                            <div class="col-1 col-md-1">
                                 <a href="javascript:;">
                                     <i class="fa fa-eye" aria-hidden="true"></i>
                                 </a>
                             </div>
-                            <div class="col-1">
+                            <div class="col-1 col-md-1">
                                 <a href="javascript:;">
                                     <i class="fa fa-trash-o " aria-hidden="true"></i>
                                 </a>

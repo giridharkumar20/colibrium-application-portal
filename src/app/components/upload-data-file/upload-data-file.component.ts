@@ -5,6 +5,11 @@ import { MalihuScrollbarService } from 'ngx-malihu-scrollbar';
 interface UploadDataDropDown {
   name: string,
 }
+interface Countries {
+  name: string,
+  icon: string,
+  showHide: boolean
+}
 
 @Component({
   selector: 'app-upload-data-file',
@@ -15,6 +20,8 @@ interface UploadDataDropDown {
 export class UploadDataFileComponent implements OnInit {
   selectedUploadDataDropDown: UploadDataDropDown;
   uploadDataDropDown: UploadDataDropDown[]
+  countries : Countries[]
+  selectedCountry: Countries;
   childData = {
     "title" : "Document Upload (3)",
     "notificationIcon": "assets/bell-icon.png",
@@ -45,6 +52,15 @@ export class UploadDataFileComponent implements OnInit {
       {name: 'CMS Certificates (1)'},
       {name: 'Other Documents'},
     ];
+    this.countries = [
+      {name: 'Liability Insurance (2)', icon: 'tick-mark-icon-small', showHide: true},
+      {name: 'Accuracy Form', icon: 'bell-icon-small', showHide: true},
+      {name: 'CMS Certificates (1)', icon: 'tick-mark-icon-small', showHide: true},
+      {name: 'Other Documents', icon: '', showHide: false},
+    ];
+  }
+  selectedItem = {
+    label: 'bell-icon-small'
   }
   uploadData = [{
       "type":"Word",
@@ -89,9 +105,7 @@ export class UploadDataFileComponent implements OnInit {
       "New": false
     }
   ]
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {};
   uploadFile($event){
     
   }
