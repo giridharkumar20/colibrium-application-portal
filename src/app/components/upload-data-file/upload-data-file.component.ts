@@ -22,6 +22,7 @@ export class UploadDataFileComponent implements OnInit {
   uploadDataDropDown: UploadDataDropDown[]
   countries : Countries[]
   selectedCountry: Countries;
+  uploadedFiles: any[] = [];
   childData = {
     "title" : "Document Upload (3)",
     "notificationIcon": "assets/bell-icon.png",
@@ -65,6 +66,7 @@ export class UploadDataFileComponent implements OnInit {
   uploadData = [{
       "type":"Word",
       "Name":"Sara-Jones-App",
+      "Tag": "Liability Insurance",
       "View": true,
       "Delete":true,
       "New": true
@@ -72,6 +74,7 @@ export class UploadDataFileComponent implements OnInit {
     {
       "type":"Excel",
       "Name":"Bob-Micheal-Form",
+      "Tag": "Liability Insurance",
       "View": true,
       "Delete":true,
       "New": false
@@ -79,6 +82,7 @@ export class UploadDataFileComponent implements OnInit {
     {
       "type":"PDF",
       "Name":"Bob-Micheal-Form",
+      "Tag": "CMS Certificates",
       "View": true,
       "Delete":true,
       "New": false
@@ -86,6 +90,7 @@ export class UploadDataFileComponent implements OnInit {
     {
       "type":"Word",
       "Name":"Sara-Jones-App",
+      "Tag": "CMS Certificates",
       "View": true,
       "Delete":true,
       "New": false
@@ -93,6 +98,7 @@ export class UploadDataFileComponent implements OnInit {
     {
       "type":"Excel",
       "Name":"Bob-Micheal-Form",
+      "Tag": "Liability Insurance",
       "View": true,
       "Delete":true,
       "New": false
@@ -100,13 +106,18 @@ export class UploadDataFileComponent implements OnInit {
     {
       "type":"PDF",
       "Name":"Bob-Micheal-Form",
+      "Tag": "CMS Certificates",
       "View": true,
       "Delete":true,
       "New": false
     }
   ]
   ngOnInit(): void {};
-  uploadFile($event){
-    
-  }
+  
+  onUpload(event) {
+    for(let file of event.files) {
+      this.uploadedFiles.push(file);
+    }
+    this.messageService.add({severity: 'info', summary: 'File Uploaded', detail: ''});
+  } 
 }

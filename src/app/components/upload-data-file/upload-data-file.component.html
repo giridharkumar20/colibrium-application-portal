@@ -2,7 +2,6 @@
     <app-common-title [childData]="childData"></app-common-title>
     <div class="reminder-container">
         <div class="mb-3">
-            <form>
                 <div class="form-group row upload-data-file-container application-form-container">
                     <div class="col-sm-6">
                         <!-- <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" placeholder="Select">
@@ -41,7 +40,6 @@
                         </p-dropdown>
                     </div>
                 </div>
-            </form>
         </div>
         <div class="mb-4 text-center">
             <div class="upload-doc-container">
@@ -70,12 +68,17 @@
             <ul>
                 <p-scrollPanel [style]="{width: '100%', height: '130px'}" styleClass="custombar1">
                     <li *ngFor='let item of uploadData'>
-                        <div class="row">
-                            <div class="col-5 col-md-8">
+                        <div class="row align-items-center">
+                            <div class="col-3 col-md-5">
                                 <i class="fa fa-file-word-o text-blue text-bold mr-1" aria-hidden="true" *ngIf="item.type == 'Word'"></i>
                                 <i class="fa fa-file-excel-o text-green text-bold mr-1" aria-hidden="true" *ngIf="item.type == 'Excel'"></i>
                                 <i class="fa fa-file-pdf-o text-red text-bold mr-1" aria-hidden="true" *ngIf="item.type == 'PDF'"></i>
                                 {{item.Name}}
+                            </div>
+                            <div class="col-2 col-md-3">
+                                <div class="tag-name">
+                                    {{item.Tag}}
+                                </div>
                             </div>
                             <div class="col-3 col-md-2 text-center">
                                 <span *ngIf="item.New == true">New</span>

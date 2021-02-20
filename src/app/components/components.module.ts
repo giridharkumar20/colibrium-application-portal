@@ -27,6 +27,8 @@ import {TabViewModule} from 'primeng/tabview';
 import {CalendarModule} from 'primeng/calendar';
 import {InputTextModule} from 'primeng/inputtext';
 import {DropdownModule} from 'primeng/dropdown';
+import {FileUploadModule} from 'primeng/fileupload';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   exports: [ClaimStatisticComponent, ClaimsStatusComponent, UploadDataFileComponent, DemographicWidgetComponent, RecentInvoicesComponent, ReminderNotesComponent, SelectImagesComponent, DetailedInformationComponent, HealthUpdatesComponent, LiveChatComponent, CommonTitleComponent, ModalComponent, RecentInviocesAdComponent, ApplicationComponent],
   declarations: [ClaimStatisticComponent, ClaimsStatusComponent, UploadDataFileComponent, DemographicWidgetComponent, RecentInvoicesComponent, ReminderNotesComponent, SelectImagesComponent, DetailedInformationComponent, HealthUpdatesComponent, LiveChatComponent, CommonTitleComponent, ModalComponent, RecentInviocesAdComponent, ApplicationComponent],
@@ -43,7 +45,9 @@ import {DropdownModule} from 'primeng/dropdown';
     CalendarModule,
     InputTextModule,
     DropdownModule,
-    FormsModule
+    FormsModule,
+    FileUploadModule,
+    HttpClientModule
   ]
 })
 export class ComponentsModule { }
